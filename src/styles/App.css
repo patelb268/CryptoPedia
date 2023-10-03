@@ -76,9 +76,9 @@ a:hover{
 }
 
 @media screen and (max-width:1300px){
-    .main{
+    /* .main{
         margin-left: 50px;
-    }
+    } */
 }
 
 @media screen and (max-width:1170px){
