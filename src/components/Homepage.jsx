@@ -15,23 +15,23 @@ const Homepage = () => {
 
   return (
     <div>
-      <Typography.Title level={2} className="heading">Statistics</Typography.Title>
+      <Typography.Title level={2} className="heading" style={{color:'white'}}>Statistics</Typography.Title>
       <Row>
-        <Col span={12}><Statistic title="Crypto Currencies" value={stats.total} /></Col>
-        <Col span={12}><Statistic title="Exchanges" value={stats.totalExchanges} /></Col>
-        <Col span={12}><Statistic title="Market Cap" value={millify(stats.totalMarketCap)} /></Col>
-        <Col span={12}><Statistic title="24hr Volume" value={millify(stats.total24hVolume)} /></Col>
-        <Col span={12}><Statistic title="Markets" value={millify(stats.totalMarkets)} /></Col>
+        <Col span={12}><Statistic title="Crypto Currencies" value={stats.total} valueStyle={{ color: 'white' }} /></Col>
+        <Col span={12}><Statistic title="Exchanges" value={stats.totalExchanges} valueStyle={{ color: 'white' }} /></Col>
+        <Col span={12}><Statistic title="Market Cap" value={millify(stats.totalMarketCap)} valueStyle={{ color: 'white' }} /></Col>
+        <Col span={12}><Statistic title="24hr Volume" value={millify(stats.total24hVolume)} valueStyle={{ color: 'white' }} /></Col>
+        <Col span={12}><Statistic title="Markets" value={millify(stats.totalMarkets)} valueStyle={{ color: 'white' }} /></Col>
       </Row>
 
       <div className="home-heading-container">
-        <Typography.Title level={2} className="home-title">Top 10 Cryptos</Typography.Title>
+        <Typography.Title level={2} className="home-title" style={{color:'white'}}>Top 10 Cryptos</Typography.Title>
         <Typography.Title level={3} className="show-more"><Link to="/cryptocurrencies">Show More</Link></Typography.Title>
       </div>
       <Cryptocurrencies simplified />
 
       <div className="home-heading-container">
-        <Typography.Title level={2} className="home-title">Current Affairs</Typography.Title>
+        <Typography.Title level={2} className="home-title" style={{color:'white'}}>Current Affairs</Typography.Title>
         <Typography.Title level={3} className="show-more"><Link to="/news">Show More</Link></Typography.Title>
       </div>
       <News simplified />
