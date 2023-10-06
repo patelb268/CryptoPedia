@@ -7,7 +7,7 @@ import icon from '../assets/icon.png';
 const { Sider } = Layout;
 
 const Navbar = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -19,7 +19,9 @@ const Navbar = () => {
       >
         {/* Logo and Title outside the collapsed menu */}
         <div className='logo-container'>
-          <Avatar src={icon} size='large' />
+          <Link to="/">
+            <Avatar src={icon} size='large'/>
+          </Link>         
           {!collapsed && (<Typography.Title level={2} className='logo'>
             <Link className='title' to="/">CryptoPedia</Link>
           </Typography.Title>)}

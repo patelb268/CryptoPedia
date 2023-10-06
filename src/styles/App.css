@@ -28,11 +28,12 @@ a:hover{
     
 }
 
-
-
-.navbar{
-    flex: 0.15;
+.stats-container p{
+    color:white;
 }
+
+
+
 
 .main{
     flex: 0.8;
@@ -135,11 +136,14 @@ a:hover{
     bottom: 0 !important;
 }
 
-
+.navbar{
+    flex: 0.15;
+}
 @media screen and (max-width:1300px){
     .main{
         margin-left: 0px;
     }
+    
 }
 
 @media screen and (max-width:1170px){
@@ -161,7 +165,7 @@ a:hover{
     }
 
     .navbar{
-        flex: 1;
+        flex: 0.35;
     }
 
     .main{
@@ -184,7 +188,7 @@ a:hover{
     }
 
     .ant-menu{
-        position: absolute;
+        /* position: absolute; */
         right: 0px;
     }
     .home-title{
@@ -212,7 +216,7 @@ a:hover{
 
 .coin-heading-container .coin-name{
     font-weight: 900;
-    color: var(--pink);
+    color: rgb(222, 176, 91)
 }
 
 .coin-heading-container p{
@@ -238,7 +242,7 @@ a:hover{
 .coin-details-heading{
     font-weight: 700 !important;
     margin-top: 20px !important;
-    color: var(--pink) !important;
+    color: rgb(222, 176, 91)!important;
 }
 
 .coin-stats{
@@ -248,7 +252,20 @@ a:hover{
     font-size: 1rem;
     opacity: 0.9;
     padding: 20px;
+    color:white important;
 
+}
+
+.coin-stats .ant-typography{
+    color: white !important;
+}
+
+.coin-desc-link {
+    color: white;
+}
+
+.coin-links .link-name{
+    color:white !important;
 }
 
 .coin-stats-name{
@@ -320,7 +337,7 @@ a:hover{
 }
 
 .coin-link:hover, .coin-stats:hover{
-    background-color: var(--bgSecondary);
+    background-color: grey;
 }
 
 @media screen and (max-width:1000px){
@@ -386,7 +403,7 @@ width: 70%;
     color: #0071bd;
 }
 .chart-title{
-    color: #0071bd !important;
+    color:rgb(222, 176, 91)!important;
 }
 .price-container{
     display: flex !important;
@@ -396,10 +413,12 @@ width: 70%;
 }
 .price-change{
     font-weight: 900 !important;
+    color:rgb(246, 242, 242) !important;
 }
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
+    color:rgb(246, 242, 242) !important;
 }
 .home-heading-container{
     display: flex;
@@ -429,6 +448,7 @@ width: 70%;
 .select-timeperiod{
     width: 200px !important;
     margin-top: 20px !important;
+    margin-bottom: 20px !important;
 }
 
 .footer {
