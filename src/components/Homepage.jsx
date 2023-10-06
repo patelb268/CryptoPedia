@@ -26,13 +26,13 @@ const Homepage = () => {
 
       <div className="home-heading-container">
         <Typography.Title level={2} className="home-title" style={{color:'white'}}>Top 10 Cryptos</Typography.Title>
-        <Typography.Title level={3} className="show-more"><Link to="/cryptocurrencies">Show More</Link></Typography.Title>
+        <Typography.Title level={3} className="show-more" ><Link to="/cryptocurrencies" >Show More</Link></Typography.Title>
       </div>
       <Cryptocurrencies simplified />
 
       <div className="home-heading-container">
         <Typography.Title level={2} className="home-title" style={{color:'white'}}>Current Affairs</Typography.Title>
-        <Typography.Title level={3} className="show-more"><Link to="/news">Show More</Link></Typography.Title>
+        <Typography.Title level={3} className="show-more" style={{color:'grey'}}><Link to="/news"  className="show-more">Show More</Link></Typography.Title>
       </div>
       <News simplified />
 
