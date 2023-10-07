@@ -1,13 +1,11 @@
-
-:root{
-    --text-primary:#000;
-    --bgPrimary:#fff;
-   --bgSecondary: #F9F9F9;
-   --pink: #0071bd;
-   --light-blue: #e6f7ff;
-   --border: #d9d9d9;
+:root {
+    --text-primary: #000;
+    --bgPrimary: #fff;
+    --bgSecondary: #F9F9F9;
+    --pink: #0071bd;
+    --light-blue: #e6f7ff;
+    --border: #d9d9d9;
 }
-
 
 * {
     margin: 0;
@@ -15,72 +13,58 @@
     box-sizing: border-box;
 }
 
-a:hover{
+a:hover {
     color: var(--pink) !important;
 }
 
-.App{
+.App {
     display: flex;
     overflow: hidden;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
 }
 
-.stats-container p{
-    color:white;
+.stats-container p {
+    color: white;
 }
 
-
-
-
-.main{
+.main {
     flex: 0.8;
     width: 100%;
-    
 }
-.routes{
+
+.routes {
     padding: 20px;
 }
-.nav-container {
-    /* position: fixed;
-    left: 0;
-    margin: 10px;
-    height: 100vh;
-    margin: 0px; */
-    background: rgba(255,255,255,0.1)!important;
+
+.nav-container,
+.ant-layout-sider-trigger {
+    background: rgba(255, 255, 255, 0.1) !important;
     border-right: 1px solid white;
+    color: white;
 }
 
-.ant-layout-sider-trigger{
-    background: rgba(255,255,255,0.1)!important;
-    color: white;
-    border-right: 1px solid white;
-}
-.ant-typography a{
+.ant-typography a {
     font-weight: 100;
     font-size: 16px;
-    color:gray;
+    color: gray;
 }
 
-
-.logo-container{
-    /* background-color: #001529; */
+.logo-container {
     display: flex;
     padding: 20px;
     align-items: center;
     width: 100%;
 }
+
 .logo {
     margin: 0 0 0 15px;
-  }
-  
-  .logo a {
-    color: white;
-  }
-  
+}
 
+.logo a {
+    color: white;
+}
 
 .ant-avatar-lg {
     width: 50px;
@@ -89,7 +73,7 @@ a:hover{
     border-radius: 50%;
 }
 
-.menu-control-container{
+.menu-control-container {
     display: none !important;
     position: absolute !important;
     right: 10px !important;
@@ -98,22 +82,22 @@ a:hover{
     background-color: var(--bgSecondary) !important;
     border: none !important;
 }
-.menu{
-    background:transparent !important;
+
+.menu {
+    background: transparent !important;
     color: white;
 }
 
-.loader{
+.loader {
     height: 81vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ant-layout{
-   background: none;
+.ant-layout {
+    background: none;
 }
-
 
 .ant-statistic-title {
     margin-bottom: 4px;
@@ -121,13 +105,12 @@ a:hover{
     font-size: 14px;
 }
 
-.ant-card{
-    background-color:rgba(245, 245, 245, 0.8)!important;
+.ant-card {
+    background-color: rgba(245, 245, 245, 0.8) !important;
     backdrop-filter: blur(50px) saturate(150%) !important;
-   
 }
 
-.sider{
+.sider {
     overflow: auto !important;
     height: 100vh !important;
     position: fixed !important;
@@ -136,74 +119,56 @@ a:hover{
     bottom: 0 !important;
 }
 
-.navbar{
+.navbar {
     flex: 0.15;
 }
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 0px;
-    }
-    
-}
 
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 60px;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
-}
-
-@media screen and (max-width:800px){
-    .app{
+@media screen and (max-width: 800px) {
+    .app {
         flex-direction: column;
         overflow: hidden;
     }
 
-    .navbar{
+    .navbar {
         flex: 0.35;
     }
 
-    .main{
+    .main {
         flex: 1;
         margin-top: 90px;
         margin-left: 0px;
         margin-right: 10px;
     }
 
-    .nav-container{
+    .nav-container {
         height: 8vh;
-        position:fixed;
+        position: fixed;
         width: 100%;
         z-index: 100;
-       
     }
-  
-    .menu-control-container{
+
+    .menu-control-container {
         display: block !important;
     }
 
-    .ant-menu{
-        /* position: absolute; */
+    .ant-menu {
         right: 0px;
     }
-    .home-title{
+
+    .home-title {
         font-size: 1.4rem !important;
     }
-    .show-more{
+
+    .show-more {
         font-size: 1.3rem !important;
     }
 }
 
-.coin-detail-container{
+.coin-detail-container {
     margin: 30px;
 }
 
-.coin-heading-container{
+.coin-heading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,110 +179,81 @@ a:hover{
     gap: 10px;
 }
 
-.coin-heading-container .coin-name{
+.coin-heading-container .coin-name {
     font-weight: 900;
-    color: rgb(222, 176, 91)
+    color: rgb(222, 176, 91);
 }
 
-.coin-heading-container p{
+.coin-heading-container p {
     font-size: 1rem;
     opacity: 0.9;
     margin-bottom: 20px;
 }
 
-.stats-container{
+.stats-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
 }
 
-.stats-container h2{
+.stats-container h2 {
     font-weight: 700;
     font-size: 1.4rem;
     margin-top: 20px;
     color: var(--pink);
 }
 
-.coin-details-heading{
-    font-weight: 700 !important;
-    margin-top: 20px !important;
-    color: rgb(222, 176, 91)!important;
-}
-
-.coin-stats{
+.coin-details-heading,
+.coin-stats {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--border);
     font-size: 1rem;
     opacity: 0.9;
     padding: 20px;
-    color:white important;
-
+    color: white important;
 }
 
-.coin-stats .ant-typography{
+.coin-stats .ant-typography {
     color: white !important;
 }
 
-.coin-desc-link {
-    color: white;
-}
-
-.coin-links .link-name{
-    color:white !important;
-}
-
-.coin-stats-name{
-    display: flex;
-    gap: 10px;
-    font-size: 1rem;
-}
-
-.stats{
-    font-weight: 800;
-}
-
-.coin-value-statistics-heading p{
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-.coin-desc-link{
+.coin-desc-link,
+.coin-links {
     display: flex;
     gap: 40px;
     margin-top: 40px;
     padding-top: 20px;
 }
 
-.coin-desc-link h2{
+.coin-desc-link h2 {
     font-weight: 700;
     color: var(--pink);
 }
 
-.coin-desc-link p{
+.coin-desc-link p,
+.coin-desc-link a {
     font-size: 1rem;
     opacity: 0.9;
-}
-
-.coin-desc-link a{
     color: var(--pink);
 }
 
-.coin-desc-link h3{
+.coin-desc-link h3 {
     font-weight: 700;
 }
 
-.coin-desc{
+.coin-desc {
     flex: 0.5;
 }
 
-.coin-links{
-  padding: 0px 20px;
+.coin-links {
+    padding: 0px 20px;
     flex: 0.5;
 }
 
-.coin-link{
+.coin-link,
+.link-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -325,140 +261,154 @@ a:hover{
     padding: 20px;
 }
 
-.link-name{
+.link-name {
     text-transform: capitalize;
     font-size: 1rem;
 }
 
-.coin-link a{
+.coin-link a {
     color: var(--pink);
     font-weight: 700;
     font-size: 1rem;
 }
 
-.coin-link:hover, .coin-stats:hover{
+.coin-link:hover,
+.coin-stats:hover {
     background-color: grey;
 }
 
-@media screen and (max-width:1000px){
-    .stats-container{
+@media screen and (max-width: 1000px) {
+    .stats-container,
+    .coin-desc-link {
         flex-direction: column;
     }
-    .coin-desc-link{
-        flex-direction: column;
-    }
-    .stats-container h2{
+
+    .stats-container h2 {
         margin-top: 0px;
     }
 }
 
-@media screen and (max-width: 500px){
-    .coin-links{
+@media screen and (max-width: 500px) {
+    .coin-links {
         padding: 0px;
     }
-    .coin-detail-container{
+
+    .coin-detail-container {
         margin: 0;
     }
-}
-@media screen and (max-width: 500px){
-    .heading{
+
+    .heading {
         margin-top: 20px;
     }
 }
 
-.select-news{
+.select-news {
     width: 180px;
 }
-.news-card{
+
+.news-card {
     min-height: 300px !important;
 }
-.news-image-container{
+
+.news-image-container {
     display: flex !important;
     justify-content: space-between !important;
 }
-.news-title{
-width: 70%;
+
+.news-title {
+    width: 70%;
 }
 
-.news-image-container .img{
-    width:100px;
-    height:100px;
+.news-image-container .img {
+    width: 100px;
+    height: 100px;
 }
-.news-card p{
+
+.news-card p {
     color: black;
     margin: 10px 0px !important;
 }
-.provider-container{
+
+.provider-container {
     display: flex;
     justify-content: space-between;
 }
-.provider-name{
+
+.provider-name {
     margin-left: 10px;
 }
 
-.chart-header{
+.chart-header {
     display: flex;
     justify-content: space-between;
     gap: 50px;
     color: #0071bd;
 }
-.chart-title{
-    color:rgb(222, 176, 91)!important;
+
+.chart-title {
+    color: rgb(222, 176, 91) !important;
 }
-.price-container{
+
+.price-container {
     display: flex !important;
     gap: 20px !important;
     align-items: center !important;
     flex-wrap: wrap !important;
 }
-.price-change{
-    font-weight: 900 !important;
-    color:rgb(246, 242, 242) !important;
-}
-.current-price{
+
+.price-change,
+.current-price {
     margin-top: 0px !important;
     font-weight: 900 !important;
-    color:rgb(246, 242, 242) !important;
+    color: rgb(246, 242, 242) !important;
 }
-.home-heading-container{
+
+.home-heading-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
 }
-.show-more{
+
+.show-more {
     margin-top: 0px !important;
 }
-.exchange-image{
+
+.exchange-image {
     margin: 0px 10px !important;
 }
-.search-crypto{
+
+.search-crypto {
     margin: 20px auto 30px auto;
     width: 250px;
 }
-.crypto-card-container{
+
+.crypto-card-container {
     min-height: 65vh !important;
 }
-.crypto-card{
+
+.crypto-card {
     min-width: 250px;
 }
-.crypto-card .crypto-image{
-    width:35px;
+
+.crypto-card .crypto-image {
+    width: 35px;
 }
-.select-timeperiod{
+
+.select-timeperiod {
     width: 200px !important;
     margin-top: 20px !important;
     margin-bottom: 20px !important;
 }
 
 .footer {
-    display:flex;
+    display: flex;
     position: fixed !important;
     left: 0 !important;
     bottom: 0 !important;
-    width: 100%; /* Ensure the footer takes the full width of the viewport */
-    background: rgba(255,255,255,0.1);
-    color: white; /* Set text color */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
     padding: 20px;
     text-align: center;
 }
