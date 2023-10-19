@@ -1,8 +1,8 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
-
+const apikey = process.env.REACT_APP_RAPID_API_KEY;
 const cruptoApiHeaders = {
-    'X-RapidAPI-Key': process.env.RAPID_API_KEY, // put your own key here
+    'X-RapidAPI-Key': apikey, // put your own key here
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
 };
 
