@@ -4,5 +4,7 @@ node_js:
 cache:
   directories:
     - "node_modules"
+intall:
+  - npm install
 script:
   - npm test
