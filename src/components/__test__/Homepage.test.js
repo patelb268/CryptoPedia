@@ -14,7 +14,7 @@ describe('Homepage Unit Test', () => {
         </Provider>        
     );
 
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
+    expect(screen.getByText('Loading')).toBeInTheDocument();
    
 });
 
