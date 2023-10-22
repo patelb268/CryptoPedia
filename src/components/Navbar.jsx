@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, Typography, Avatar, Layout } from 'antd';
-import { NavLink,useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { HomeOutlined, BulbOutlined, FundOutlined } from '@ant-design/icons';
 import icon from '../assets/icon.png';
 
@@ -8,7 +8,6 @@ const { Sider } = Layout;
 
 const Navbar = () => {
   const [collapsed, setCollapsed] = useState(true); 
-  const navigate = useNavigate();
   // Define an array of menu items
   const menuItems = [
     { key: 'home', icon: <HomeOutlined />, label:<NavLink to="/">Home</NavLink>},
