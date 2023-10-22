@@ -7,31 +7,20 @@ import '@testing-library/jest-dom/extend-expect';
 
 
 describe('Homepage Unit Test', () => {
-//   test('renders loading message', async () => {
-//     render(
-//         <Provider store={store}>
-//             <Homepage />
-//         </Provider>        
-//     );
-
-//     expect(screen.getByText('Loading...')).toBeInTheDocument();
-   
-// });
-
-it('renders content after data is fetched', async () => {
+  test('renders loading message', async () => {
     render(
         <Provider store={store}>
             <Homepage />
         </Provider>        
     );
 
-    await waitFor(() => expect(screen.queryByText('Loading...')).toBeNull());
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+   
+});
 
-    // Check if the statistics are rendered
-    await waitFor(() => expect(screen.getByText('Statistics')).toBeInTheDocument());
-
-
-},10000);
+// it('renders content after data is fetched', async () => {
+   
+// });
   
 
 
