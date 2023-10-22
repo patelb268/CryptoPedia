@@ -1,4 +1,6 @@
 // setupTests.js
+import 'whatwg-fetch';
+
 Object.defineProperty(window, 'matchMedia', {
     value: jest.fn(() => ({
       matches: false,
