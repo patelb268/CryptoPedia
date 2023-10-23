@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { Menu, Typography, Avatar, Layout } from 'antd';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { HomeOutlined, BulbOutlined, FundOutlined } from '@ant-design/icons';
 import icon from '../assets/icon.png';
 
 const { Sider } = Layout;
 
 const Navbar = () => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(true); 
+  // Define an array of menu items
+  const menuItems = [
+    { key: 'home', icon: <HomeOutlined />, label:<NavLink to="/">Home</NavLink>},
+    { key: 'cryptocurrencies', icon: <FundOutlined />,label: <NavLink to="/cryptocurrencies">Cryptocurrencies</NavLink> },
+    { key: 'news', icon: <BulbOutlined />,label: <NavLink to="/news">News</NavLink>},
+  ];
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -19,27 +25,18 @@ const Navbar = () => {
       >
         {/* Logo and Title outside the collapsed menu */}
         <div className='logo-container'>
-          <Link to="/">
-            <Avatar src={icon} size='large'/>
-          </Link>         
-          {!collapsed && (<Typography.Title level={2} className='logo'>
-            <Link className='title' to="/">CryptoPedia</Link>
-          </Typography.Title>)}
+          <NavLink to="/">
+            <Avatar src={icon} size='large' alt='logo'/>
+          </NavLink>         
+          {!collapsed && (
+            <Typography.Title level={2} className='logo' data-testid="navbar-title">
+              <NavLink className='title' to="/">CryptoPedia</NavLink>
+            </Typography.Title>
+          )}
         </div>
 
         {/* Menu Items */}
-        <Menu className='menu' theme='dark' mode='inline'>
-          <Menu.Item key='home' icon={<HomeOutlined />}>
-            <Link to="/">Home</Link>
-          </Menu.Item>
-
-          <Menu.Item key='cryptocurrencies' icon={<FundOutlined />}>
-            <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-          </Menu.Item>
-
-          <Menu.Item key='news' icon={<BulbOutlined />}>
-            <Link to="/news">News</Link>
-          </Menu.Item>
+        <Menu className='menu' theme='dark' mode='inline' items={menuItems}>
         </Menu>
       </Sider>
     </Layout>
